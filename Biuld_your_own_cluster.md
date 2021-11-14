@@ -6,11 +6,16 @@ I consider myself an engineer turned into a mix of software developer, CFD engin
 
 ## My  goal?
 I'd like to:
-- Learn a bit more about the hardware needed to run a DL network
-- Improve some of mine coding skills
-- Have the abality to use the cluster when I want to with no restriction
+- Learn a bit more about the hardware needed to run a DL network.
+- Improve some of my coding skills.
+- Have the ability to use the cluster when I want to with no restriction.
 - Use it as a part of my portfolio as a Data Scientist (I know what you  are thinking!? This has nothing to do with Data Science! I agree with you, but I also true that being completely ingorant on the matter is equally bad! So, here I am.)
 - Have a bit of fun doing it.
+- Use to run some heavy-on-hardware Kaggle competitions (vision for instance).
+
+## What I do not want?
+- I am not interested on buildng the latest moost powerful made-at-home cluster machine.
+- I  am not interest into renting the machine to others.
 
 ## Some very high level questions
 This a list of question I had to answer myself before  spending my own money.
@@ -22,3 +27,4 @@ This a list of question I had to answer myself before  spending my own money.
 -  How dangerous are these machines in terms of fire safety? What if my cooling system fails and I am not there to turn the machine off?
 -  Can I get the same level of lfexibility from freely avaiilable resource such as Google Colab?
 -  How much support can I get from the internet?
+-  What sort of internet connectivity do I need? Can I do it withouth?
