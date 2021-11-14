@@ -1,5 +1,5 @@
 # How to build yout own Deep Learning cluster
-This is an account of what I've read/done/followed to build my own deep learning cluster. Hopefully, it would be of some help for the others.
+This is an account of what I've read/done/followed to build my own deep learning cluster. Hopefully, it would be of some help for the others. It all started when I stumbled upon this [article](https://towardsdatascience.com/build-and-setup-your-own-deep-learning-server-from-scratch-e771dacaa252).
 
 ## What was my background?
 I consider myself an engineer turned into a mix of software developer, CFD engineer, optimisation engineer, system engineer and data scientist. I had next-to-nothing experience on how hardware. If I did, you can also do it. The  only thing this tutorial is not going to provide you with is the capital to buy the component.
@@ -22,9 +22,11 @@ This a list of question I had to answer myself before  spending my own money.
 -  Is this project going to make bankrupt either buying the hardware or running the machine?
 -  Can I run the two major deep learning frameworks withouth getting stuck into a "sorry, this hardware is currently not supported!"
 -  How many CPUs and GPUs do I need?
--  How many CPPs and GPUs can I afford?
+-  How many CPUs and GPUs can I afford?
 -  Can I buy some second hand components?
 -  How dangerous are these machines in terms of fire safety? What if my cooling system fails and I am not there to turn the machine off?
 -  Can I get the same level of lfexibility from freely avaiilable resource such as Google Colab?
 -  How much support can I get from the internet?
--  What sort of internet connectivity do I need? Can I do it withouth?
+-  What sort of internet connectivity do I need? Can I do it without?
+-  If I invest my money how long can I keep this cluster for? Will I be *forced* to change the hardware?
+-  Would I be better off buying more older GPUs or less but newer GPUs?
