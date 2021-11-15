@@ -16,6 +16,7 @@ I'd like to:
 ## What I do not want?
 - I am not interested on buildng the latest moost powerful made-at-home cluster machine.
 - I  am not interest into renting the machine to others.
+- I do not want to use the freely available GPUs provided by Google and Kaggle for two reasons: I will be constrained in some manner and more importanlty my learning will be limited. At the end of the day, the idea of this project of mine was to learn a bit more about hardwares for DL.
 
 ## Some very high level questions
 This a list of question I had to answer myself before  spending my own money.
