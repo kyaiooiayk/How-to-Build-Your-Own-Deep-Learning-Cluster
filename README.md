@@ -19,9 +19,11 @@ I'd like to:
 - I do not want to use the freely available GPUs provided by Google and Kaggle for two reasons: I will be constrained in some manner and more importanlty my learning will be limited. At the end of the day, the idea of this project of mine was to learn a bit more about hardwares for DL.
 
 ## Some very high level questions
-This a list of question I had to answer myself before  spending my own money.
--  Is this project going to make bankrupt either buying the hardware or running the machine?
--  Can I run the two major deep learning frameworks withouth getting stuck into a "sorry, this hardware is currently not supported!"
+This a list of questions I had to answer myself before  spending my own money.
+-  **Is this project going to make me bankrupt only by buying the component?** These references are difficult to compare as different prices mean different system, but this it is still good enough to get the right order of magniture. My conclusion is that with roughly a 3k GBP I should be able to get myself something. Here is a list with references of what I was able to gather from the internet:
+   - Ref #1 reports a total cost of ~ $1,800 CAD in 2017
+-  Is this project going to make me bankrupt when running the machine? How much is going to be my electricity bill?
+-  Can I run the two major deep learning frameworks (TensorFlow and PyTorch) without getting stuck into a "sorry, this hardware is currently not supported!"
 -  How many CPUs and GPUs do I need?
 -  How many CPUs and GPUs can I afford?
 -  Can I buy some second hand components?
@@ -31,4 +33,5 @@ This a list of question I had to answer myself before  spending my own money.
 -  What sort of internet connectivity do I need? Can I do it without?
 -  If I invest my money how long can I keep this cluster for? Will I be *forced* to change the hardware?
 -  Would I be better off buying more older GPUs or less but newer GPUs?
--  Where can I can I get access to some GPUs for free? *I know there are at least two options. Option No.1 is offered by [Google Colab](https://colab.research.google.com/?utm_source=scs-index)*. Option No.2 is offered by [Kaggle](https://www.kaggle.com/dansbecker/running-kaggle-kernels-with-a-gpu).
+-  **Where can I can I get access to some GPUs for free?** I know there are at least two options. Option No.1 is offered by [Google Colab](https://colab.research.google.com/?utm_source=scs-index). Option No.2 is offered by [Kaggle](https://www.kaggle.com/dansbecker/running-kaggle-kernels-with-a-gpu).
+-  **Why not buying more CPUs?** For a very simple reasons. GPUs, if used properly, are simply the best for DL.*
