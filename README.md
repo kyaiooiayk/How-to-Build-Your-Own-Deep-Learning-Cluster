@@ -21,7 +21,7 @@ I'd like to:
 ## Some very high level questions
 This a list of questions I had to answer myself before  spending my own money.
 -  **Is this project going to make me bankrupt only by buying the component?** These references are difficult to compare as different prices mean different system, but this it is still good enough to get the right order of magniture. My conclusion is that with roughly a 3k GBP I should be able to get myself something. Here is a list with references of what I was able to gather from the internet:
-   - Ref #1 reports a total cost of ~ $1,800 CAD in 2017
+   - [Ref #1](https://towardsdatascience.com/build-and-setup-your-own-deep-learning-server-from-scratch-e771dacaa252) reports a total cost of ~ $1,800 CAD in 2017
 -  Is this project going to make me bankrupt when running the machine? How much is going to be my electricity bill?
 -  Can I run the two major deep learning frameworks (TensorFlow and PyTorch) without getting stuck into a "sorry, this hardware is currently not supported!"
 -  How many CPUs and GPUs do I need?
