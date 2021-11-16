@@ -25,7 +25,9 @@ This a list of questions I had to answer myself before  spending my own money.
    - [Ref #2](https://towardsdatascience.com/building-your-own-deep-learning-box-47b918aea1eb) | ~ $1,600 USD | 2017
 -  Is this project going to make me bankrupt when running the machine? How much is going to be my electricity bill?
 -  Can I run the two major deep learning frameworks (TensorFlow and PyTorch) without getting stuck into a "sorry, this hardware is currently not supported!"
--  How many CPUs and GPUs do I need?
+-  **How many CPUs and GPUs do I need?** From the references reported above there is seems to be consensus to use only one CPU board. This generally come with some sort of hyperthreading, but people do not seem to bother toomuch about it. The real question is how many GPUs do I need? Each board comes with a certain number of physical GPUs. Once of my goalis to use this in the Kaggle competition. So to get an idea of many I'd ideally need I set myself into a quest of finding out how many GPUs kagglers used in the past competition. 
+   - [Ref#1]() | 32 GPUs | 2010
+   - [Ref#1]() | 16 GPUs | 2010
 -  How many CPUs and GPUs can I afford?
 -  Can I buy some second hand components?
 -  How dangerous are these machines in terms of fire safety? What if my cooling system fails and I am not there to turn the machine off?
