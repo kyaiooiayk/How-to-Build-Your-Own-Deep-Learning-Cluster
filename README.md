@@ -65,9 +65,9 @@ This a list of questions I had to answer myself before  spending my own money.
 - **Why not buying more CPUs?** For a very simple reasons. GPUs, if used properly, are simply the best for DL.
 
 ## CPUs vs GPUs
-- My first point was to get an idea of the order of magnitude. In other words, how do a cluster full of GPUs improve the situation when compared to a cluster full of CPUs? This picture clarified my idea [Ref](https://www.slideshare.net/ExtractConf/andrew-ng-chief-scientist-at-baidu 
-![image](https://user-images.githubusercontent.com/89139139/148080378-b3020e33-8591-4539-b8ed-50eb28627694.png)
-)
+- **How GPUs came about?** Developed by NVIDIA in 2007. 
+- **How does GPUs work with CPUs?** How do they share the workload? GPU-accelerated computing is the employment of a graphics processing unit (GPU) along with a computer processing unit (CPU) in order to facilitate processing-intensive operations such as deep learning, analytics and engineering applications. GPU-accelerated computing functions by moving the compute-intensive sections of the applications to the GPU while remaining sections are allowed to execute in the CPU. [Ref](https://www.techopedia.com/definition/32876/gpu-accelerated-computing) 
+- **My first point was to get an idea of the order of magnitude. In other words, how do a cluster full of GPUs improve the situation when compared to a cluster full of CPUs?** This picture clarified my idea [Ref](https://www.slideshare.net/ExtractConf/andrew-ng-chief-scientist-at-baidu )
 ![image](https://user-images.githubusercontent.com/89139139/148080348-b740fd05-e89c-4eb8-ac60-0a52f175a6ee.png)
 
 ## How I've made my final choice?
