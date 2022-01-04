@@ -65,6 +65,10 @@ This a list of questions I had to answer myself before  spending my own money.
 - **Why not buying more CPUs?** For a very simple reasons. GPUs, if used properly, are simply the best for DL.
 
 ## CPUs vs GPUs
+- My first point was to get an idea of the order of magnitude. In other words, how do a cluster full of GPUs improve the situation when compared to a cluster full of CPUs? This picture clarified my idea [Ref](https://www.slideshare.net/ExtractConf/andrew-ng-chief-scientist-at-baidu 
+![image](https://user-images.githubusercontent.com/89139139/148080378-b3020e33-8591-4539-b8ed-50eb28627694.png)
+)
+![image](https://user-images.githubusercontent.com/89139139/148080348-b740fd05-e89c-4eb8-ac60-0a52f175a6ee.png)
 
 ## How I've made my final choice?
 - The two main points are my (personal, your may be others!): constraint on budget and constrain on how much I was willing to pay in extra electricity. For me the electricity cap was more stringent than the actual lump sum to by the component. The reason is simple, if the electricity cost is too high then it will quickly sum up to a huge amount over time and the last thing I need is to by a Ferrari and not using it. You get the drift.
