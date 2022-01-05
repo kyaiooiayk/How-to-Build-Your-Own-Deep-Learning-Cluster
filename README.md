@@ -71,7 +71,15 @@ This a list of questions I had to answer myself before  spending my own money.
 
 - **How does GPUs work with CPUs?** How do they share the workload? GPU-accelerated computing is the employment of a graphics processing unit (GPU) along with a computer processing unit (CPU) in order to facilitate processing-intensive operations such as deep learning, analytics and engineering applications. GPU-accelerated computing functions by moving the compute-intensive sections of the applications to the GPU while remaining sections are allowed to execute in the CPU. [Ref](https://www.techopedia.com/definition/32876/gpu-accelerated-computing) 
 
-- **Why GPUs have less cache but more memory bandwith?** Memory bandwidth is the rate at which data can be read from or stored into a semiconductor memory by a processor. On one side we have CPUs that have a deep parallel cache hierarchies which take up most of the space. On the other hand, you have GPUs that have loads of lighweight cores, that compared to CPUs, have much of their area devoted to arithmetic and less to memory and caches. This result in having much hegher memory bandwith. [Ref](http://www.cs.cornell.edu/courses/cs6787/2017fa/Lecture8.pdf)
+- **Why GPUs have less cache but more memory bandwith?** Memory bandwidth is the rate at which data can be read from or stored into a semiconductor memory by a processor. On one side we have CPUs that have a deep parallel cache hierarchies which take up most of the space. On the other hand, you have GPUs that have loads of lighweight cores, that compared to CPUs, have much of their area devoted to arithmetic and less to memory and caches. This results in having much hegher memory bandwith. [Ref](http://www.cs.cornell.edu/courses/cs6787/2017fa/Lecture8.pdf)
+
+   | GPUs                                    | CPUs |
+   | --------------------------------------- | ---------------------------------------------- | 
+   | Large No of cores, but slower than CPUs | Smaller No of cores, but much faster than GOPs |
+   | High memory bandwith to control the cores | Lower memory bandwith |
+   | Special purposes, meaning the do only task very very well | General purpouse |
+   | Highly parallel processing | Sequential processing |
+
 
 - **How does a cluster full of GPUs improve the situation when compared to a cluster full of CPUs?** This picture clarified my idea [Ref](https://www.slideshare.net/ExtractConf/andrew-ng-chief-scientist-at-baidu )
 ![image](https://user-images.githubusercontent.com/89139139/148080348-b740fd05-e89c-4eb8-ac60-0a52f175a6ee.png)
