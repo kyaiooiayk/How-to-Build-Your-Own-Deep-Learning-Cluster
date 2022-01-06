@@ -2,7 +2,7 @@
 This is an account of what I've read/done/followed to build my own deep learning cluster. Hopefully, it would be of some help for the others. It all started when I stumbled upon this [article](https://towardsdatascience.com/build-and-setup-your-own-deep-learning-server-from-scratch-e771dacaa252).
 
 ## Intended audience
-Anyone who known little about the topic and we'd like to get started somehow.
+Anyone who knows little about the topic and would like to get started somehow.
 
 ## What was my background?
 I consider myself an aerospace engineer turned into a mix of software developer, CFD engineer, optimisation engineer, system engineer and data scientist. I had next-to-nothing experience on how hardware. If I did, you can also do it. The  only thing this tutorial is not going to provide you with is the capital to buy the component!
