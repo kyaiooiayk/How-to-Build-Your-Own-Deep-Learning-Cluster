@@ -1,5 +1,5 @@
 # How to build your own Deep Learning cluster *(and what to know about GPUs!)*
-This is an account of what I've read/done/followed to build my own deep learning cluster. Hopefully, it would be of some help for the others. It all started when I stumbled upon this [article](https://towardsdatascience.com/build-and-setup-your-own-deep-learning-server-from-scratch-e771dacaa252).
+This is an account of what I've read/done/followed to build my own deep learning cluster. Hopefully, it would be of some help for the others. It all started when I stumbled upon this [article](https://towardsdatascience.com/build-and-setup-your-own-deep-learning-server-from-scratch-e771dacaa252). What followed is a collection of questions and answers I asked myself while working on this project. Where possible and simply copy-and-shame the text as it was written by their original authors and their references is duly reported.
 
 ## Intended audience
 Anyone who knows little about the topic and would like to get started somehow.
