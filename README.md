@@ -22,6 +22,7 @@ I'd like to:
 - I do not want to use the freely available GPUs provided by Google and Kaggle for two reasons: I will be constrained in some manner and more importanlty my learning will be limited. At the end of the day, the idea of this project of mine was to learn a bit more about hardwares for DL.
 
 ## Some very high level questions
+*(Read this if you are interested to quickly build a GPU cluster and less interested in understanding the inner working principles of GPUs)*
 This a list of questions I had to answer myself before  spending my own money.
 -  **Is this project going to make me bankrupt only by buying the component?** These references are difficult to compare as different prices mean different system, but this it is still good enough to get the right order of magniture. My conclusion is that with roughly a 3k GBP I should be able to get myself something. Here is a list with references of what I was able to gather from the internet:
    - [Ref #1](https://towardsdatascience.com/build-and-setup-your-own-deep-learning-server-from-scratch-e771dacaa252) | ~ $1,800 CAD | 2017
@@ -65,6 +66,7 @@ This a list of questions I had to answer myself before  spending my own money.
 - **Why not buying more CPUs?** For a very simple reasons. GPUs, if used properly, are simply the best for DL.
 
 ## CPUs vs GPUs
+(*Read this if you are interested to understand the inner working principles of GPUs*)
 - **How GPUs came about?** Developed by NVIDIA in 2007.
 
 - **Only NVIDIA?** At the moment, there are no stable GPU computation platforms other than CUDA; this means that you must have an NVIDIA graphical card installed on your computer. CUDA was created by Nvidia. CUDA stands for Compute Unified Device Architecture. Nevertheless there are other project such as such as OpenCL that provide GPU computation for other GPU brands through initiatives such as [BLAS](https://github.com/clMathLibraries/clBLAS), but they are under heavy development and are not fully optimized for deep learning applications in Python. Another limitation of OpenCL is that only AMD is actively involved so that it will be beneficial to AMD GPUs. The hope is to have eventually a hardware-independent GPU application for machine learning. [Ref](https://www.packtpub.com/product/large-scale-machine-learning-with-python/9781785887215)
@@ -99,7 +101,10 @@ This is the second reason why GPUs are faster than CPUs for deep learning. As a 
    - (2) Hiding memory access latency under thread parallelism, and 
    - (3) Large and fast register and L1 memory which is easily programmable are the components which make GPUs so well suited for deep learning.
 
+- **With or without tensore core?** GPUs come with tensor cores but also withouth them. Tensor Cores reduce the used cycles needed for calculating multiply and addition operations by ~16-fold; for a 32×32 matrix, from 128 cycles to 8 cycles. Tensor Cores reduce the reliance on repetitive shared memory access, thus saving additional cycles for memory access. Tensor Cores are so fast that computation is no longer a bottleneck. The only bottleneck is getting data to the Tensor Cores. Note that also TPUs  have tensor cores, the difference is only in how the memory is loaded and this seems to give TPUs the edge when it comes to matrix multiplications. [Ref](https://timdettmers.com/2018/10/17/tpus-vs-gpus-for-transformers-bert/)
+
 ## How I've made my final choice?
 - The two main points are my (personal, your may be others!): constraint on budget and constrain on how much I was willing to pay in extra electricity. For me the electricity cap was more stringent than the actual lump sum to by the component. The reason is simple, if the electricity cost is too high then it will quickly sum up to a huge amount over time and the last thing I need is to by a Ferrari and not using it. You get the drift.
 
-start from page 1789
+## References
+- [Which GPU(s) to Get for Deep Learning](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/)
