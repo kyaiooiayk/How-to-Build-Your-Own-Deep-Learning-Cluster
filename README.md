@@ -103,6 +103,10 @@ This is the second reason why GPUs are faster than CPUs for deep learning. As a 
 
 - **With or without tensore core?** GPUs come with tensor cores but also withouth them. Tensor Cores reduce the used cycles needed for calculating multiply and addition operations by ~16-fold; for a 32×32 matrix, from 128 cycles to 8 cycles. Tensor Cores reduce the reliance on repetitive shared memory access, thus saving additional cycles for memory access. Tensor Cores are so fast that computation is no longer a bottleneck. The only bottleneck is getting data to the Tensor Cores. Note that also TPUs  have tensor cores, the difference is only in how the memory is loaded and this seems to give TPUs the edge when it comes to matrix multiplications. [Ref](https://timdettmers.com/2018/10/17/tpus-vs-gpus-for-transformers-bert/)
 
+- **What is a cycle and operation latency?** If a processor runs at 1GHz, it can do 10^9 cycles per second. Each cycle represents an opportunity for computation.  Most useful operations take longer than one cycle, so one new operation to start, it needs to wait for the number of cycles of time it takes for the previous operation to finish. This is also called the *operation latency*. [Ref](https://timdettmers.com/2018/10/17/tpus-vs-gpus-for-transformers-bert/)
+
+- **What is a wrap?** The smallest unit of threads on a GPU is a pack of 32 threads which is called a *warp*. All memory operations on the GPU are optimized for warps. For example, loading from global memory happens at a granularity of 32*4 bytes, exactly 32 floats, exactly one float for each thread in a warp. [Ref](https://timdettmers.com/2018/10/17/tpus-vs-gpus-for-transformers-bert/)
+
 ## How I've made my final choice?
 - The two main points are my (personal, your may be others!): constraint on budget and constrain on how much I was willing to pay in extra electricity. For me the electricity cap was more stringent than the actual lump sum to by the component. The reason is simple, if the electricity cost is too high then it will quickly sum up to a huge amount over time and the last thing I need is to by a Ferrari and not using it. You get the drift.
 
