@@ -84,7 +84,6 @@ This a list of questions I had to answer myself before  spending my own money.
    | Special purposes, meaning the do only task very very well | General purpouse |
    | Highly parallel processing | Sequential processing |
 
-
 - **How does a cluster full of GPUs improve the situation when compared to a cluster full of CPUs?** This picture clarified my idea. [Ref](https://www.slideshare.net/ExtractConf/andrew-ng-chief-scientist-at-baidu)
 
 ![image](https://user-images.githubusercontent.com/89139139/148080348-b740fd05-e89c-4eb8-ac60-0a52f175a6ee.png)
@@ -107,6 +106,12 @@ This is the second reason why GPUs are faster than CPUs for deep learning. As a 
 
 - **What is a wrap?** The smallest unit of threads on a GPU is a pack of 32 threads which is called a *warp*. All memory operations on the GPU are optimized for warps. For example, loading from global memory happens at a granularity of 32*4 bytes, exactly 32 floats, exactly one float for each thread in a warp. [Ref](https://timdettmers.com/2018/10/17/tpus-vs-gpus-for-transformers-bert/)
 
+- **Why would you memory bandwith to compare GPUs?** Tensor Cores are very fast. So fast, in fact, that they are idle most of the time as they are waiting for memory to arrive from global memory. For example, during BERT Large training, which uses huge matrices — the larger, the better for Tensor Cores — we have a Tensor Core TFLOPS utilization of about 30%, meaning that 70% of the time, Tensor Cores are idle. This means that when comparing two GPUs with Tensor Cores, one of the single best indicators for each GPU’s performance is their memory bandwidth. [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/)
+   | GPU | Memory bandwith |
+   | --- | -------------- | 
+   | LA100 | 1,555 [GB/s] |
+   | V100| 900 [GB/s]  |
+   
 ## How I've made my final choice?
 - The two main points are my (personal, your may be others!): constraint on budget and constrain on how much I was willing to pay in extra electricity. For me the electricity cap was more stringent than the actual lump sum to by the component. The reason is simple, if the electricity cost is too high then it will quickly sum up to a huge amount over time and the last thing I need is to by a Ferrari and not using it. You get the drift.
 
