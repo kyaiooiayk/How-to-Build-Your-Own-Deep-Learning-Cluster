@@ -114,6 +114,12 @@ This is the second reason why GPUs are faster than CPUs for deep learning. As a 
 
 - **Why share memory, L1 cache size and registers are important?*** We know that the speed at which we transfer data is the real issue for GPUs. We also know that the faster the memory trasnfer is the more we can exploit the GPU real power. However, the faster the memory transfer is, the smaller it is. For this reason the transfer of data through the GPU's memory hierarchy is highly optimised. This hierarchy is as follows: (from slow to super fast) global memory -> local shared memory -> register. To get the speed-up order of magnitude consider that a matrix memory tile in shared memory is ~10-50x faster than the global GPU memory, whereas the tensor core’s register is ~200x faster than the global GPU memory. Remember thath a tile is a memory block in shared memory. [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/)
 
+## Some practical solutions
+- **Can I limit the GPU power consumtion?** Yes, this can be done and the bigger question is how performance is impacted by this? [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/) suggests that a reduction of 50[W] for a max rating of 250[W] RTX 2081 Ti would reduce the performance by only 7%. The result was obtianed by running a 4x RTX 2080 Ti cluster on a 500 mini-batches BERT inference.
+![image](https://user-images.githubusercontent.com/89139139/149536092-96b69ea5-98a5-4d1a-8df7-cdab58540935.png)
+
+
+
 ## How I've made my final choice?
 - The two main points are my (personal, your may be others!): constraint on budget and constrain on how much I was willing to pay in extra electricity. For me the electricity cap was more stringent than the actual lump sum to by the component. The reason is simple, if the electricity cost is too high then it will quickly sum up to a huge amount over time and the last thing I need is to by a Ferrari and not using it. You get the drift.
 
