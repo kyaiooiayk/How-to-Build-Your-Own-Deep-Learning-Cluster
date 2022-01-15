@@ -65,6 +65,15 @@ This a list of questions I had to answer myself before  spending my own money.
 
 - **Why not buying more CPUs?** For a very simple reasons. GPUs, if used properly, are simply the best for DL.
 
+- **How much memory do I need?** I guess to answer this question we should what do I need to do in the first place? Considering that one of my goal was to use this machine for some Kaggle competition, this [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/) helped me understand what sort of memory I needed:
+    - Using pretrained transformers; training small transformer from scratch>= 11GB
+    - Training large transformer or convolutional nets in research / production: >= 24 GB
+    - Prototyping neural networks (either transformer or convolutional nets) >= 10 GB
+    - Kaggle competitions >= 8 GB
+    - Applying computer vision >= 10GB
+    - Neural networks for video: 24 GB
+    - Reinforcement learning =10GB + a strong deep learning desktop the largest Threadripper or EPYC CPU you can afford.
+
 ## CPUs vs GPUs
 (*Read this if you are interested to understand the inner working principles of GPUs*)
 - **How GPUs came about?** Developed by NVIDIA in 2007.
@@ -114,14 +123,18 @@ This is the second reason why GPUs are faster than CPUs for deep learning. As a 
 
 - **Why share memory, L1 cache size and registers are important?*** We know that the speed at which we transfer data is the real issue for GPUs. We also know that the faster the memory trasnfer is the more we can exploit the GPU real power. However, the faster the memory transfer is, the smaller it is. For this reason the transfer of data through the GPU's memory hierarchy is highly optimised. This hierarchy is as follows: (from slow to super fast) global memory -> local shared memory -> register. To get the speed-up order of magnitude consider that a matrix memory tile in shared memory is ~10-50x faster than the global GPU memory, whereas the tensor core’s register is ~200x faster than the global GPU memory. Remember thath a tile is a memory block in shared memory. [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/)
 
-## Some practical solutions
+## Good to know (practical solutions to common problems)
 - **Can I limit the GPU power consumtion?** Yes, this can be done and the bigger question is how performance is impacted by this? [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/) suggests that a reduction of 50[W] for a max rating of 250[W] RTX 2081 Ti would reduce the performance by only 7%. The result was obtianed by running a 4x RTX 2080 Ti cluster on a 500 mini-batches BERT inference.
 ![image](https://user-images.githubusercontent.com/89139139/149536092-96b69ea5-98a5-4d1a-8df7-cdab58540935.png)
 
-
-
 ## How I've made my final choice?
 - The two main points are my (personal, your may be others!): constraint on budget and constrain on how much I was willing to pay in extra electricity. For me the electricity cap was more stringent than the actual lump sum to by the component. The reason is simple, if the electricity cost is too high then it will quickly sum up to a huge amount over time and the last thing I need is to by a Ferrari and not using it. You get the drift.
+
+## Unbiased benchmarking
+- Normalized GPU deep learning performance relative to an RTX 2080 Ti. [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/)
+![image](https://user-images.githubusercontent.com/89139139/149625891-75e45a9e-f927-452f-8454-66072dda5e32.png)
+
+
 
 ## References
 - [Which GPU(s) to Get for Deep Learning](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/)
