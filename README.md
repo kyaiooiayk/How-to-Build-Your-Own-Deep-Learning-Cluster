@@ -126,6 +126,15 @@ This is the second reason why GPUs are faster than CPUs for deep learning. As a 
 ## Good to know (practical solutions to common problems)
 - **Can I limit the GPU power consumtion?** Yes, this can be done and the bigger question is how performance is impacted by this? [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/) suggests that a reduction of 50[W] for a max rating of 250[W] RTX 2081 Ti would reduce the performance by only 7%. The result was obtianed by running a 4x RTX 2080 Ti cluster on a 500 mini-batches BERT inference.
 ![image](https://user-images.githubusercontent.com/89139139/149536092-96b69ea5-98a5-4d1a-8df7-cdab58540935.png)
+- **How can I fit +24GB models into 10GB memory?** A need made it worse since the onslaught of BERT-like models. Here is a list of solutions:
+    - Training on 16-bit precision instea of the classical 32 as shown [here](https://medium.com/the-artificial-impostor/use-nvidia-apex-for-easy-mixed-precision-training-in-pytorch-46841c6eed8c)
+    - Gradient checkpointing (only store some of the activations and recompute them in the backward pass) as shown [here](https://github.com/prigoyal/pytorch_memonger/blob/master/tutorial/Checkpointing_for_PyTorch_models.ipynb)
+    - GPU-to-CPU Memory Swapping (swap layers not needed to the CPU; swap them back in just-in-time for backprop) as shown [here](https://arxiv.org/abs/2002.05645v5)
+    - Model Parallelism (each GPU holds a part of each layer; supported by fairseq) as shown [here](https://timdettmers.com/2014/11/09/model-parallelism-deep-learning/)
+    - Pipeline parallelism (each GPU hols a couple of layers of the network)
+    - ZeRO parallelism (each GPU holds partial layers)as shown [here](https://www.microsoft.com/en-us/research/blog/zero-deepspeed-new-system-optimizations-enable-training-models-with-over-100-billion-parameters/)
+    - 3D parallelism (Model + pipeline + ZeRO) as shown [here](https://www.microsoft.com/en-us/research/blog/deepspeed-extreme-scale-model-training-for-everyone/)
+    - CPU Optimizer state (store and update Adam/Momentum on the CPU while the next GPU forward pass is happening) 
 
 ## How I've made my final choice?
 - The two main points are my (personal, your may be others!): constraint on budget and constrain on how much I was willing to pay in extra electricity. For me the electricity cap was more stringent than the actual lump sum to by the component. The reason is simple, if the electricity cost is too high then it will quickly sum up to a huge amount over time and the last thing I need is to by a Ferrari and not using it. You get the drift.
