@@ -44,6 +44,8 @@ This a list of questions I had to answer myself before  spending my own money.
    
 -  **How many CPUs and GPUs can I afford?** It seems that the GPU are twice as expensive than a CPU and obviousy the factor will increase for some top-notch GPU. So for a budget of 2k spent only on GPU the best one can hope for is 4 GPUs.
 
+- **How about the old K80?** According to this [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/#Is_upgrading_from_RTX_20_to_RTX_30_GPU_worth_it_Or_Should_I_wait_for_the_next_GPU) the K80 may offer you a good compromise between memory and speed. We see how memory is important to fit a model and how memory bandwith is also more important in terms of speed. So, can we traide some speed for more memory? If you have a limited budget then the K80 and the Quadro M6000 are alternatives you can consider. The Quadro M6000 has 24 GB of memory and the Tesla K80 has a 2-in-1 GPU with 2x 12 GB of memory.
+
 -  **Can I buy some second hand components?** There seems to be a market just for it. Some trusted website are:
    -  [Amazon second hand GPUs](https://www.amazon.co.uk/s?k=used+gpu&s=price-desc-rank&adgrpid=120731098785&gclid=CjwKCAiAv_KMBhAzEiwAs-rX1L2CB-E-AuMlTfSi6eDv8YxfinXuslQf7qOr7akmjG9_JI2COYLV1xoCOHsQAvD_BwE&hvadid=516377110988&hvdev=c&hvlocphy=1006567&hvnetw=g&hvqmt=e&hvrand=12132915950628804715&hvtargid=kwd-341756687644&hydadcr=17220_1714691&qid=1637668594&tag=googhydr-21&ref=sr_st_price-desc-rank).
 
