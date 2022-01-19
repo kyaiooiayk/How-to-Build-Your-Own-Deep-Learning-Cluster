@@ -44,7 +44,7 @@ This a list of questions I had to answer myself before  spending my own money.
    
 -  **How many CPUs and GPUs can I afford?** It seems that the GPU are twice as expensive than a CPU and obviousy the factor will increase for some top-notch GPU. So for a budget of 2k spent only on GPU the best one can hope for is 4 GPUs.
 
-- **How about the old K80?** According to this [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/#Is_upgrading_from_RTX_20_to_RTX_30_GPU_worth_it_Or_Should_I_wait_for_the_next_GPU) the K80 may offer you a good compromise between memory and speed. We see how memory is important to fit a model and how memory bandwith is also more important in terms of speed. So, can we traide some speed for more memory? If you have a limited budget then the K80 and the Quadro M6000 are alternatives you can consider. The Quadro M6000 has 24 GB of memory and the Tesla K80 has a 2-in-1 GPU with 2x 12 GB of memory.
+- **How about the old K80?** According to this [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/#Is_upgrading_from_RTX_20_to_RTX_30_GPU_worth_it_Or_Should_I_wait_for_the_next_GPU) the K80 may offer you a good compromise between memory and speed. We see how memory is important to fit a model and how memory bandwith is also more important in terms of speed. So, can we traide some speed for more memory? If you have a limited budget then the K80 and the Quadro M6000 are alternatives you can consider. The Quadro M6000 has 24 GB of memory and the Tesla K80 has a 2-in-1 GPU with 2x 12 GB of memory. The more important question is whether the K80 have tesnor cores or not? According to these [Ref](https://www.microway.com/knowledge-center-articles/comparison-of-nvidia-geforce-gpus-and-nvidia-tesla-gpus/) they don't.
 
 -  **Can I buy some second hand components?** There seems to be a market just for it. Some trusted website are:
    -  [Amazon second hand GPUs](https://www.amazon.co.uk/s?k=used+gpu&s=price-desc-rank&adgrpid=120731098785&gclid=CjwKCAiAv_KMBhAzEiwAs-rX1L2CB-E-AuMlTfSi6eDv8YxfinXuslQf7qOr7akmjG9_JI2COYLV1xoCOHsQAvD_BwE&hvadid=516377110988&hvdev=c&hvlocphy=1006567&hvnetw=g&hvqmt=e&hvrand=12132915950628804715&hvtargid=kwd-341756687644&hydadcr=17220_1714691&qid=1637668594&tag=googhydr-21&ref=sr_st_price-desc-rank).
@@ -75,6 +75,8 @@ This a list of questions I had to answer myself before  spending my own money.
     - Applying computer vision >= 10GB
     - Neural networks for video: 24 GB
     - Reinforcement learning =10GB + a strong deep learning desktop the largest Threadripper or EPYC CPU you can afford.
+    
+- **Can I use different GPU types?** Yes, you can! But you cannot parallelize efficiently across GPUs of different types. I could imagine a 3x RTX 3070 + 1 RTX 3090 could make sense for a prototyping-rollout split. On the other hand, parallelizing across 4x RTX 3070 GPUs would be very fast if you can make the model fit onto those GPUs. The only other reason why you want to do this that I can think of is if you’re going to use your old GPUs. This works just fine, but parallelization across those GPUs will be inefficient since the fastest GPU will wait for the slowest GPU to catch up to a synchronization point (usually gradient update). [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/#Is_upgrading_from_RTX_20_to_RTX_30_GPU_worth_it_Or_Should_I_wait_for_the_next_GPU)
 
 ## CPUs vs GPUs
 (*Read this if you are interested to understand the inner working principles of GPUs*)
