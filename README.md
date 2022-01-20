@@ -48,6 +48,13 @@ This a list of questions I had to answer myself before  spending my own money.
 
 -  **Can I buy some second hand components?** There seems to be a market just for it. Some trusted website are:
    -  [Amazon second hand GPUs](https://www.amazon.co.uk/s?k=used+gpu&s=price-desc-rank&adgrpid=120731098785&gclid=CjwKCAiAv_KMBhAzEiwAs-rX1L2CB-E-AuMlTfSi6eDv8YxfinXuslQf7qOr7akmjG9_JI2COYLV1xoCOHsQAvD_BwE&hvadid=516377110988&hvdev=c&hvlocphy=1006567&hvnetw=g&hvqmt=e&hvrand=12132915950628804715&hvtargid=kwd-341756687644&hydadcr=17220_1714691&qid=1637668594&tag=googhydr-21&ref=sr_st_price-desc-rank).
+- These [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/#What_is_NVLink_and_is_it_useful) provides a list how much you could end up spending for a second hand GPU (orer from new to low):
+   -  RTX 2070 ($400) 
+   -  RTX 2060 ($300)
+   -  GTX 1070 Ti ($230)
+   -  GTX 1070 ($220) 
+   -  GTX 980 Ti (6GB $150) 
+   -  GTX 1650 Super ($190)
 
 -  **How dangerous are these machines in terms of fire safety?** What if my cooling system fails and I am not there to turn the machine off? 
 
@@ -77,6 +84,8 @@ This a list of questions I had to answer myself before  spending my own money.
     - Reinforcement learning =10GB + a strong deep learning desktop the largest Threadripper or EPYC CPU you can afford.
     
 - **Can I use different GPU types?** Yes, you can! But you cannot parallelize efficiently across GPUs of different types. I could imagine a 3x RTX 3070 + 1 RTX 3090 could make sense for a prototyping-rollout split. On the other hand, parallelizing across 4x RTX 3070 GPUs would be very fast if you can make the model fit onto those GPUs. The only other reason why you want to do this that I can think of is if you’re going to use your old GPUs. This works just fine, but parallelization across those GPUs will be inefficient since the fastest GPU will wait for the slowest GPU to catch up to a synchronization point (usually gradient update). [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/#Is_upgrading_from_RTX_20_to_RTX_30_GPU_worth_it_Or_Should_I_wait_for_the_next_GPU)
+
+- **What is NVLink, and is it useful?** NVLink is a high speed interconnect between GPUs. This is something used if you have a cluster with +128 GPUs; in other cases it probably not beneficial.
 
 ## CPUs vs GPUs
 (*Read this if you are interested to understand the inner working principles of GPUs*)
