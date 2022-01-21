@@ -87,6 +87,8 @@ This a list of questions I had to answer myself before  spending my own money.
 
 - **What is NVLink, and is it useful?** NVLink is a high speed interconnect between GPUs. This is something used if you have a cluster with +128 GPUs; in other cases it probably not beneficial.
 
+- **AMD GPUs + ROCm vs. NVIDIA GPUs + CUDA** This sound like julia vs. python, julia has a lot of potential (righlty) but python has a massive community. Firsyly, CUDA is GPU aware, but it only supports the GPUs of one vendor. ROCm is open source, so any vendor can work with it and port it to their platform. The biggest problem is that AMD GPUs lack of Tensor Cores, this makes their deep learning performance poor compared to NVIDIA GPUs. However, if you solve software and the lack of Tensor Cores, AMD still has a problem: the lack of community. If you have a problem with NVIDIA GPUs, you can Google the problem and find a solution. [Ref#1](https://www.admin-magazine.com/HPC/Articles/AMD-s-Greg-Stoner-on-ROCm), [Ref#2](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/#What_is_NVLink_and_is_it_useful)
+
 ## CPUs vs GPUs
 (*Read this if you are interested to understand the inner working principles of GPUs*)
 - **How GPUs came about?** Developed by NVIDIA in 2007.
