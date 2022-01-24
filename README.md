@@ -94,6 +94,19 @@ This a list of questions I had to answer myself before  spending my own money.
    - If a **cloud provider** charges you, say £2.0 per hour this makes £2.00/h * 0.15 * 24 [hours] * 365 [days] = £2,628 per year.
    - Now let us assume a desktop GPU desktop would cost you £2.5k to know where the BEP. Then we sum the cost of the electricty which gives us a total of 71+2,628 = £2,699 per year. This is telling us that for a year of use the cost is very similar with the cloud instance being cheaper by ~£50. Since I am planning to use this machine for more than a year it is clear for me that is better to build my own machine. Something that cannot be readily calculated is what you learn along the way. Buying a service force you learn how to use their GUI, but building your own cluster forced you to learn much much more. For this this is the most important aspect.
 
+- **Final conclusions** This [Ref]() providesa nice easy-to-understand final suggestion for those who are about to buy a GPU for personal use:
+   - *Best GPU overall*: RTX 3080 and RTX 3090.
+   - *GPUs to avoid (as an individual)*: Any Tesla card; any Quadro card; any Founders Edition card; Titan RTX, Titan V, Titan XP.
+   - *Cost-efficient but expensive*: RTX 3080.
+   - *Cost-efficient and cheaper*:  RTX 3070, RTX 2060 Super
+   - *I have little money*: Buy used cards. Hierarchy: RTX 2070 ($400), RTX 2060 ($300), GTX 1070 ($220), GTX 1070 Ti ($230), GTX 1650 Super ($190), GTX 980 Ti (6GB $150).
+   - *I have almost no money*: There are a lot of startups that promo their clouds: Use free cloud credits and switch companies accounts until you can afford a GPU.
+   - *I do Kaggle*: RTX 3070.
+   - *I am a competitive computer vision, pretraining, or machine translation researcher*: 4x RTX 3090. Wait until working builds with good cooling, and enough power are confirmed (I will update this blog post).
+   * *I am an NLP researcher*: If you do not work on machine translation, language modeling, or pretraining of any kind, an RTX 3080 will be sufficient and cost-effective.
+   - *I started deep learning, and I am serious about it*: Start with an RTX 3070. If you are still serious after 6-9 months, sell your RTX 3070 and buy 4x RTX 3080. Depending on what area you choose next (startup, Kaggle, research, applied deep learning), sell your GPUs, and buy something more appropriate after about three years (next-gen RTX 40s GPUs).
+   - *I want to try deep learning, but I am not serious about it*: The RTX 2060 Super is excellent but may require a new power supply to be used. If your motherboard has a PCIe x16 slot and you have a power supply with around 300 W, a GTX 1050 Ti is a great option since it will not require any other computer components to work with your desktop computer.
+
 ## CPUs vs GPUs
 (*Read this if you are interested to understand the inner working principles of GPUs*)
 - **How GPUs came about?** Developed by NVIDIA in 2007.
