@@ -1,11 +1,14 @@
 # How to build your own Deep Learning cluster *(and what to know about GPUs!)*
-This is an account of what I've read/done/followed to build my own deep learning cluster. Hopefully, it would be of some help for the others. It all started when I stumbled upon this [article](https://towardsdatascience.com/build-and-setup-your-own-deep-learning-server-from-scratch-e771dacaa252). What followed is a collection of questions and answers I asked myself while working on this project. Where possible and simply copy-and-shame the text as it was written by their original authors and their references is duly reported.
+This is an account of what I've read/done/followed to build my own deep learning cluster. Hopefully, it would be of some help for the others. It all started when I stumbled upon this [article](https://towardsdatascience.com/build-and-setup-your-own-deep-learning-server-from-scratch-e771dacaa252). What followed is a collection of questions and answers I asked myself while working on this project. Where possible, I simply copy-and-shame the text as it was written by their original authors and their references is duly reported.
+***
 
 ## Intended audience
 Anyone who knows little about the topic and would like to get started somehow.
+***
 
 ## What was my background?
 I consider myself an aerospace engineer turned into a mix of software developer, CFD engineer, optimisation engineer, system engineer and data scientist. I had next-to-nothing experience on how hardware. If I did, you can also do it. The  only thing this tutorial is not going to provide you with is the capital to buy the component!
+***
 
 ## My goal?
 I'd like to:
@@ -15,11 +18,13 @@ I'd like to:
 - Use it as a part of my portfolio as a Data Scientist (I know what you  are thinking!? This has nothing to do with Data Science! I agree with you, but I also true that being completely ingorant on the matter is equally bad! So, here I am.)
 - Have a bit of fun doing it.
 - Use to run some heavy-on-hardware Kaggle competitions (vision for instance).
+***
 
 ## What am I not interested?
 - I am not interested on buildng the latest moost powerful made-at-home cluster machine.
 - I  am not interest into renting the machine to others.
 - I do not want to use the freely available GPUs provided by Google and Kaggle for two reasons: I will be constrained in some manner and more importanlty my learning will be limited. At the end of the day, the idea of this project of mine was to learn a bit more about hardwares for DL.
+***
 
 ## Some very high level questions
 *(Read this if you are interested to quickly build a GPU cluster and less interested in understanding the inner working principles of GPUs)*
@@ -106,6 +111,7 @@ This a list of questions I had to answer myself before  spending my own money.
    * *I am an NLP researcher*: If you do not work on machine translation, language modeling, or pretraining of any kind, an RTX 3080 will be sufficient and cost-effective.
    - *I started deep learning, and I am serious about it*: Start with an RTX 3070. If you are still serious after 6-9 months, sell your RTX 3070 and buy 4x RTX 3080. Depending on what area you choose next (startup, Kaggle, research, applied deep learning), sell your GPUs, and buy something more appropriate after about three years (next-gen RTX 40s GPUs).
    - *I want to try deep learning, but I am not serious about it*: The RTX 2060 Super is excellent but may require a new power supply to be used. If your motherboard has a PCIe x16 slot and you have a power supply with around 300 W, a GTX 1050 Ti is a great option since it will not require any other computer components to work with your desktop computer.
+***
 
 ## CPUs vs GPUs
 (*Read this if you are interested to understand the inner working principles of GPUs*)
@@ -155,6 +161,7 @@ This is the second reason why GPUs are faster than CPUs for deep learning. As a 
    | V100| 900 [GB/s] |
 
 - **Why share memory, L1 cache size and registers are important?*** We know that the speed at which we transfer data is the real issue for GPUs. We also know that the faster the memory trasnfer is the more we can exploit the GPU real power. However, the faster the memory transfer is, the smaller it is. For this reason the transfer of data through the GPU's memory hierarchy is highly optimised. This hierarchy is as follows: (from slow to super fast) global memory -> local shared memory -> register. To get the speed-up order of magnitude consider that a matrix memory tile in shared memory is ~10-50x faster than the global GPU memory, whereas the tensor core’s register is ~200x faster than the global GPU memory. Remember thath a tile is a memory block in shared memory. [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/)
+***
 
 ## Good to know (practical solutions to common problems)
 - **Can I limit the GPU power consumtion?** Yes, this can be done and the bigger question is how performance is impacted by this? [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/) suggests that a reduction of 50[W] for a max rating of 250[W] RTX 2081 Ti would reduce the performance by only 7%. The result was obtianed by running a 4x RTX 2080 Ti cluster on a 500 mini-batches BERT inference.
@@ -168,15 +175,16 @@ This is the second reason why GPUs are faster than CPUs for deep learning. As a 
     - ZeRO parallelism (each GPU holds partial layers)as shown [here](https://www.microsoft.com/en-us/research/blog/zero-deepspeed-new-system-optimizations-enable-training-models-with-over-100-billion-parameters/)
     - 3D parallelism (Model + pipeline + ZeRO) as shown [here](https://www.microsoft.com/en-us/research/blog/deepspeed-extreme-scale-model-training-for-everyone/)
     - CPU Optimizer state (store and update Adam/Momentum on the CPU while the next GPU forward pass is happening) 
+***
 
-## How I've made my final choice?
-- The two main points are my (personal, your may be others!): constraint on budget and constrain on how much I was willing to pay in extra electricity. For me the electricity cap was more stringent than the actual lump sum to by the component. The reason is simple, if the electricity cost is too high then it will quickly sum up to a huge amount over time and the last thing I need is to by a Ferrari and not using it. You get the drift.
+## What did I consider to make my final choice?
+- The two main points are my (personal, yours may be differemt!): constraint on budget and constrain on how much I was willing to pay in extra electricity. For me the electricity cap was more stringent than the actual lump sum to by the component. The reason is simple, if the electricity cost is too high then it will quickly sum up to a huge amount over time and the last thing I need is to by a Ferrari and not using it. You get the drift.
+***
 
 ## Unbiased benchmarking
 - Normalized GPU deep learning performance relative to an RTX 2080 Ti. [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/)
 ![image](https://user-images.githubusercontent.com/89139139/149625891-75e45a9e-f927-452f-8454-66072dda5e32.png)
-
-
+***
 
 ## References
 - [Which GPU(s) to Get for Deep Learning](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/)
