@@ -6,10 +6,6 @@ This is an account of what I've read/done/followed to build my own deep learning
 Anyone who knows little about the topic and would like to get started somehow.
 ***
 
-## What was my background?
-I consider myself an aerospace engineer turned into a mix of software developer, CFD engineer, optimisation engineer, system engineer and data scientist. I had next-to-nothing experience on how hardware. If I did, you can also do it. The  only thing this tutorial is not going to provide you with is the capital to buy the component!
-***
-
 ## My goal?
 I'd like to:
 - Learn a bit more about the hardware needed to run a DL network.
@@ -154,7 +150,7 @@ This is the second reason why GPUs are faster than CPUs for deep learning. As a 
 
 - **What is a wrap?** The smallest unit of threads on a GPU is a pack of 32 threads which is called a *warp*. All memory operations on the GPU are optimized for warps. For example, loading from global memory happens at a granularity of 32*4 bytes, exactly 32 floats, exactly one float for each thread in a warp. [Ref](https://timdettmers.com/2018/10/17/tpus-vs-gpus-for-transformers-bert/)
 
-- **Why would you use memory bandwith to compare GPUs?** Tensor Cores are very fast. So fast, in fact, that they are idle most of the time as they are waiting for memory to arrive from global memory. For example, during BERT Large training, which uses huge matrices — the larger, the better for Tensor Cores — we have a Tensor Core TFLOPS utilization of about 30%, meaning that 70% of the time, Tensor Cores are idle. This means that when comparing two GPUs with Tensor Cores, one of the single best indicators for each GPU’s performance is their memory bandwidth. [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/)
+- **Why would you use memory bandwith to compare GPUs?** Tensor Cores are very fast. So fast, in fact, that they are idle most of the time as they are waiting for memory to arrive from global memory. For example, during BERT Large training, which uses huge matrices — the larger, the better for Tensor Cores — we have a Tensor Core TFLOPS utilization of about 30%, meaning that 70% of the time, Tensor Cores are idle. This means that when comparing two GPUs with Tensor Cores, one of the single best indicators for each GPU’s performance is their memory bandwidth. [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/). [This](https://bounded-regret.ghost.io/how-fast-can-we-perform-a-forward-pass/) article clearly explains how memory bandwith is an issue for language models.
    | GPU | Memory bandwith |
    | --- | -------------- | 
    | LA100 | 1,555 [GB/s] |
