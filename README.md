@@ -184,6 +184,10 @@ This is the second reason why GPUs are faster than CPUs for deep learning. As a 
 ![image](https://user-images.githubusercontent.com/89139139/149625891-75e45a9e-f927-452f-8454-66072dda5e32.png)
 ***
 
+## What if I do not have a cluster but only my laptop?
+- [Installing Nvidia CUDA on Mac OSX for GPU-Based Parallel Computing](https://www.quantstart.com/articles/Installing-Nvidia-CUDA-on-Mac-OSX-for-GPU-Based-Parallel-Computing/)
+- [Vector Addition "Hello World!" Example with CUDA on Mac OSX](https://www.quantstart.com/articles/Vector-Addition-Hello-World-Example-with-CUDA-on-Mac-OSX/)
+
 ## References
 - [Which GPU(s) to Get for Deep Learning](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/)
 - [FPGA vs GPU, What to Choose?](https://hardwarebee.com/fpga-vs-gpu-choose/)
