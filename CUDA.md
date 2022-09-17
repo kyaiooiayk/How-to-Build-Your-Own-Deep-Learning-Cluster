@@ -5,3 +5,4 @@
 - [Vector Addition "Hello World!" Example with CUDA on Mac OSX](https://www.quantstart.com/articles/Vector-Addition-Hello-World-Example-with-CUDA-on-Mac-OSX/)
 - [Installing Nvidia CUDA on Ubuntu 14.04 for Linux GPU Computing](https://www.quantstart.com/articles/Installing-Nvidia-CUDA-on-Ubuntu-14-04-for-Linux-GPU-Computing/)
 - [`dev_array:` A Useful Array Class for CUDA](https://www.quantstart.com/articles/dev_array_A_Useful_Array_Class_for_CUDA/)
+- [Monte Carlo Simulations In CUDA - Barrier Option Pricing](https://www.quantstart.com/articles/Monte-Carlo-Simulations-In-CUDA-Barrier-Option-Pricing/)
