@@ -159,6 +159,9 @@ This is the second reason why GPUs are faster than CPUs for deep learning. As a 
    | V100| 900 [GB/s] |
 
 - **Why share memory, L1 cache size and registers are important?*** We know that the speed at which we transfer data is the real issue for GPUs. We also know that the faster the memory trasnfer is the more we can exploit the GPU real power. However, the faster the memory transfer is, the smaller it is. For this reason the transfer of data through the GPU's memory hierarchy is highly optimised. This hierarchy is as follows: (from slow to super fast) global memory -> local shared memory -> register. To get the speed-up order of magnitude consider that a matrix memory tile in shared memory is ~10-50x faster than the global GPU memory, whereas the tensor core’s register is ~200x faster than the global GPU memory. Remember thath a tile is a memory block in shared memory. [Ref](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/)
+
+<img width="694" alt="image" src="https://user-images.githubusercontent.com/89139139/206897000-a7ebe502-8857-40b1-a951-c65c37833b42.png">
+
 ***
 
 ## Good to know (practical solutions to common problems)
