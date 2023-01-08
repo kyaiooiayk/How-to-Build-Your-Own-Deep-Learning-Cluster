@@ -190,3 +190,5 @@ This is the second reason why GPUs are faster than CPUs for deep learning. As a 
 ## References
 - [Which GPU(s) to Get for Deep Learning](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/)
 - [FPGA vs GPU, What to Choose?](https://hardwarebee.com/fpga-vs-gpu-choose/)
+- [Deploying ML Models on GPU and what you should know](https://neptune.ai/blog/deploying-ml-models-on-gpu-with-kyle-morris)
+***
